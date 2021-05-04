@@ -4,9 +4,9 @@ These are personal test builds of mine. In no way do I hold responsibility if it
 Proceed at your own risk.
 
 ### Note
-Decryption does not currently work at all, this applies to both custom ROM running A10 and A11.
-Android 11 - Decryption, most likely because of keymaster 4.1 and other tree specific things.
-Android 10 - Not working, not sure why. I am not on A10 so I cannot test or debug it. Will do that once A11 decryption is working.
+2021-04-27:
+Initial build which boots on OOS11 for 7T / Pro.
+Decryption on OOS11 does not work. Might work on custom that uses OOS11 blobs.
 
 ## Setup repo tool
 Setup repo tool from here https://source.android.com/setup/develop#installing-repo
@@ -16,7 +16,7 @@ Setup repo tool from here https://source.android.com/setup/develop#installing-re
 Sync aosp_r29 manifest:
 
 ```
-repo init --depth=1 -u https://android.googlesource.com/platform/manifest -b android-11.0.0_r29
+repo init -u https://android.googlesource.com/platform/manifest -b android-11.0.0_r29
 ```
 
 Make a directory named local_manifest under .repo, and create a new manifest file, for example hotdog.xml
@@ -34,6 +34,7 @@ and then paste the following
 	revision="android-11" />
 </manifest>
 ```
+Use https://del.dog/a11-twrp-extras.txt is same directory as well. You might need to pick few patches from gerrit.twrp.me to get some stuff working.
 
 Sync the sources with
 
