@@ -48,7 +48,7 @@ on init
     # checker programs.
     mkdir /dev/fscklogs 0770 root system
 
-om boot
+on boot
     setprop sys.usb.config adb
 
     #chmod 0777 mount-dynamic-rw.sh
