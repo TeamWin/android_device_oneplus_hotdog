@@ -50,7 +50,6 @@ on init
 
 on boot
     setprop sys.usb.config adb
-
     #chmod 0777 mount-dynamic-rw.sh
     chmod 0777 /system/bin/unified-script.sh
     start unified-script
